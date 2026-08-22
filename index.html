@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="🧠 Memory Cards — flip cards, match pairs, beat the clock. A modern, dependency-free HTML5 memory matching game." />
+  <title>🧠 Memory Cards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated gradient background driven by canvas (purely decorative) -->
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <main class="app" role="main">
+    <header class="hero">
+      <h1 class="title">🧠 Memory Cards</h1>
+      <p class="tagline">Flip two cards, find every pair, beat the clock.</p>
+    </header>
+
+    <section class="panel controls glass" aria-label="Game controls">
+      <div class="controls-row">
+        <label class="field">
+          <span class="field-label">Difficulty</span>
+          <select id="difficulty" class="select">
+            <option value="4">Easy · 4 × 4</option>
+            <option value="6">Hard · 6 × 6</option>
+            <option value="8">Expert · 8 × 8</option>
+          </select>
+        </label>
+
+        <button id="restart" class="btn btn-primary" type="button">↻ New Game</button>
+      </div>
+
+      <div class="stats" role="status" aria-live="polite">
+        <div class="stat">
+          <span class="stat-label">Time</span>
+          <span class="stat-value" id="time">0:00</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Moves</span>
+          <span class="stat-value" id="moves">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Pairs</span>
+          <span class="stat-value" id="pairs">0 / 0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Best</span>
+          <span class="stat-value" id="best">—</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="board" class="board" aria-label="Game board"></section>
+
+    <!-- Win overlay -->
+    <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="You won">
+      <div class="overlay-card glass">
+        <h2 class="overlay-title">🎉 You Win!</h2>
+        <p class="overlay-text" id="overlay-text"></p>
+        <button id="play-again" class="btn btn-primary" type="button">Play Again</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
