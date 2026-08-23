@@ -1,46 +1,25 @@
-# Design Prompt — 🧠 Memory Cards
+# Memory Cards — Game Prompt
+
+Build a modern, dependency-free HTML5 Canvas game called **Memory Cards**.
 
 ## Concept
-A classic memory / concentration matching game. The board is a grid of face-down
-cards. The player flips two cards per turn; if they match, the pair stays revealed
-with a neon glow, otherwise both flip back after a short beat. The goal is to reveal
-and match every pair. Clean, satisfying, and replayable.
+Flip the cards two at a time to find every matching pair on the board.
 
 ## Features
-- Multiple difficulty levels: Easy 4×4 (8 pairs), Hard 6×6 (18 pairs), Expert 8×8 (32 pairs).
-- Live timer that starts on the first flip.
-- Move counter (increments per attempted pair).
-- Matched / total pairs progress readout.
-- Win detection with a celebratory overlay summarizing time and moves.
-- Best time per difficulty persisted in localStorage, with a new-record flag.
-- Reshuffle / New Game control and live difficulty switching.
+  - Flip-and-match logic
+  - Move and timer tracking
+  - Win detection
 
-## Visual Style
-- Dark, animated gradient background (CSS @keyframes drift) plus a decorative Canvas
-  layer of slowly drifting glowing orbs.
-- Glassmorphism panels and cards: translucent backgrounds, soft borders,
-  backdrop-filter blur.
-- Gradient-clipped title and gradient-filled buttons.
-- Smooth 3D card flip (CSS `transform: rotateY` + `preserve-3d` + `backface-visibility`).
-- Neon glow on matched pairs; a cohesive set of emoji symbols for card faces.
-- Cohesive purple / cyan / magenta palette. Fully self-contained — NO external
-  images, fonts, or network requests.
+## Visual Style (required — "modern, attractive, today's style, innovative")
+- Dark animated gradient background and ambient particles.
+- Glassmorphism HUD panels (blurred translucent cards).
+- Gradient title text (background-clip) and gradient buttons.
+- Glowing elements (canvas shadowBlur), smooth animations, cohesive palette.
+- No external assets or network requests.
 
-## Tech Constraints
-- Vanilla JavaScript (ES2020+), wrapped in an IIFE; no frameworks or libraries.
-- No build step and no CDN.
-- DOM + CSS for the board (appropriate here); Canvas used for the background only.
-- localStorage for best-time persistence.
-- Fully playable and bug-free.
+## Technical constraints
+- Vanilla JavaScript (ES2020+), single IIFE module, requestAnimationFrame loop.
+- No frameworks, no CDN, no libraries, no build step. Fully offline/self-contained.
 
-## File List
-- index.html — markup, controls, board container, win overlay.
-- style.css — palette, animated gradient, glassmorphism, flip animation, glow.
-- game.js — game state, flip/match logic, timer, win detection, canvas background.
-- assets/images/.gitkeep — (reserved for screenshots)
-- assets/sounds/.gitkeep — (reserved for sounds)
-- README.md / README_fa.md — English + Persian docs.
-- LICENSE — MIT.
-- Prompt — this design brief.
-- package.json — metadata + `start` script.
-- .github/workflows/deploy.yml — GitHub Pages deploy.
+## Files
+`index.html`, `style.css`, `game.js`, `assets/images/.gitkeep`, `assets/sounds/.gitkeep`, `README.md`, `README_fa.md`, `LICENSE`, `Prompt`, `package.json`, `.github/workflows/deploy.yml`.

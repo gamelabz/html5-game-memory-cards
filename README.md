@@ -1,37 +1,27 @@
-# 🧠 Memory Cards
+# 🃏 Memory Cards
 
-A modern, dependency-free memory matching game built with Canvas and vanilla JavaScript.
+🃏 Memory Cards — a modern, dependency-free HTML5 game built with Canvas and vanilla JavaScript.
 
 🎮 **Play Online:** https://gamelabz.github.io/html5-game-memory-cards/
 
 ## 📸 Screenshot
 
-![🧠 Memory Cards](assets/images/screenshot.png)
+![Memory Cards](assets/images/screenshot.png)
 
 ## 🎯 About
 
-🧠 Memory Cards is a classic concentration game reimagined with a sleek, glassmorphic UI. Flip cards two at a time to find matching pairs — matched pairs stay revealed while mismatches flip back after a beat. Clear the whole board to win, and chase the fastest time on each difficulty. Three grid sizes keep it fresh for casual players and memory masters alike.
+Flip the cards two at a time to find every matching pair on the board.
 
 ## 🕹️ Controls
 
-- **Click / tap** a card to flip it.
-- **Click / tap** a second card to reveal it and test for a match.
-- **Difficulty** dropdown — switch between Easy (4×4), Hard (6×6), and Expert (8×8).
-- **↻ New Game** — reshuffle and restart at any time.
-- **Keyboard** — cards are real `<button>` elements, so they are fully focusable and operable with Tab + Enter/Space.
+- Flip: Click / Tap a card
+- Restart: R
 
 ## ✨ Features
 
-- Three difficulty levels: 4×4 (8 pairs), 6×6 (18 pairs), 8×8 (32 pairs).
-- Live **timer** that starts on your first flip.
-- **Move counter** tracking every pair you attempt.
-- **Pair progress** indicator (matched / total).
-- **Win detection** with a celebratory overlay summarizing your run.
-- **Best time per difficulty** saved to `localStorage` with a 🏆 new-record flag.
-- Dark **animated gradient background** (CSS keyframe drift + a decorative Canvas layer).
-- **Glassmorphism** panels and cards with a smooth 3D flip animation.
-- **Neon glow** on matched pairs; cohesive emoji card faces (no external images).
-- Fully **self-contained** — no frameworks, no CDN, no network requests.
+- Flip-and-match logic
+- Move and timer tracking
+- Win detection
 
 ## 🚀 Run Locally
 
@@ -49,8 +39,8 @@ Then visit the printed URL (default `http://localhost:3000`).
 
 ## 🛠️ Tech Stack
 
-- HTML5 `<canvas>` (decorative animated background)
-- CSS3 (custom properties, flexbox, glassmorphism, 3D transforms)
+- HTML5 `<canvas>`
+- CSS3 (custom properties, flexbox, glassmorphism)
 - Vanilla JavaScript (ES2020, no frameworks)
 
 ## 🤝 Contributing
